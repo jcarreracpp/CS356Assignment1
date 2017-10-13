@@ -10,5 +10,22 @@ package cs356assignment1;
  * @author Jorge
  */
 public class IVoteService {
+    private String question;
+    private int[] answerArray = new int[6];
     
+    public IVoteService(){}
+    
+    public void submitQuestion(Question q){
+        question = q.getQuestion();
+    }
+    
+    public void submitAnswer(Student s){
+        boolean[] temp = s.getResponse();
+        
+        for(int i = 0; i < temp.length; i++){
+            if(temp[i]){
+                answerArray[i]++;
+            }
+        }
+    }
 }
