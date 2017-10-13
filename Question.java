@@ -18,6 +18,16 @@ public class Question {
 
     public Question(){}
     
+    public Question(boolean trueFalse, boolean multipleAns){
+        this.trueFalse = trueFalse;
+        
+        if(trueFalse){
+            this.multipleAns = false;
+        }else{
+            this.multipleAns = multipleAns;
+        }
+    }
+    
     public Question(String question, boolean trueFalse, boolean multipleAns){
         this.question = question;
         this.trueFalse = trueFalse;
@@ -27,6 +37,10 @@ public class Question {
         }else{
             this.multipleAns = multipleAns;
         }
+    }
+    
+    public void setQuestion(String setQ){
+        question = setQ;
     }
     
     public String getQuestion(){

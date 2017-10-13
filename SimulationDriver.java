@@ -15,7 +15,16 @@ public class SimulationDriver {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Question new1 = new Question(true, false);
+        DriverAssistant da = new DriverAssistant();
+        new1.setQuestion("Do infinite while loops exist?");
+        da.automateTest(new1);
+        
+        System.out.println();
+        
+        new1 = new Question(false, true);
+        new1.setQuestion("Of the first six letters of the alphabet, which ones"
+                + " are your favorites?");
+        da.automateTest(new1);
     }
-    
 }
